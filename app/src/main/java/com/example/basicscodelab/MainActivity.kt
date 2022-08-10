@@ -3,6 +3,7 @@ package com.example.basicscodelab
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
@@ -39,10 +40,10 @@ fun MyApp() {
 @Composable
 fun Greeting(name: String) {
     Surface(color = MaterialTheme.colors.primary) {
-        Text(
-            text = "Hello $name!",
-            modifier = Modifier.padding(24.dp)
-        )
+        Column(Modifier.padding(24.dp)) {
+            Text(text = "Hello, ")
+            Text(text = name)
+        }
     }
 }
 
